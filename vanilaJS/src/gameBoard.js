@@ -104,7 +104,9 @@ export default class GameBoard {
                     if (this.correction === this.gameMode.correction) {
                         this.timer.stop();
                         this.scoreBoard.addTimeScore(this.timer.getRemainingTime());
-                        alert(`WIN!!! SCORE: ${this.scoreBoard.getScore()}`);
+                        setTimeout(() => {
+                            alert(`WIN!!! SCORE: ${this.scoreBoard.getScore()}`);
+                        }, 0);
                     }
                     return;
                 }
